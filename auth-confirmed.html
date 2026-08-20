@@ -212,7 +212,41 @@
       line-height: 1.5;
     }
 
-    .close-note {
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 26px auto 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 111, 150, 0.45);
+      color: var(--ink);
+      background: rgba(255, 111, 150, 0.14);
+      text-decoration: none;
+      font-weight: 750;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .button:hover {
+      background: rgba(255, 111, 150, 0.22);
+      border-color: rgba(255, 111, 150, 0.7);
+    }
+
+    .button.secondary {
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.055);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+        .close-note {
       margin: 24px 0 0;
       color: rgba(248, 245, 242, 0.52);
       font-size: 0.84rem;
@@ -306,7 +340,12 @@
       <p>You can now open ROSE on your phone or computer and sign in to the application.</p>
     </section>
 
-    <p class="close-note">Puedes cerrar esta página.</p>
+    <div class="actions">
+      <a class="button" href="http://127.0.0.1:8765">Abrir ROSE</a>
+      <a class="button secondary" href="http://localhost:8765">Abrir ROSE local</a>
+    </div>
+
+    <p class="close-note">En móvil, abre la app ROSE después de cerrar esta página.</p>
   </main>
 </body>
 </html>
